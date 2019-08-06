@@ -1,6 +1,6 @@
 
 config system
-	option hostname 'Sverdlova-63-28-1'
+	option hostname 'Sverdlova-2'
 	option timezone 'MSK-3'
 	option ttylogin '0'
 	option log_size '64'
