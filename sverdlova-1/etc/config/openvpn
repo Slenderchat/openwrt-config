@@ -1,0 +1,26 @@
+
+package openvpn
+
+config openvpn sverdlova
+	option enabled 1
+	option local 91.205.165.159
+	option port 1194
+	option proto udp
+	option dev tap
+	option ca /etc/pki/ca.crt
+	option cert /etc/pki/sverdlova.crt
+	option key /etc/pki/sverdlova.key
+	option dh /etc/pki/dh.pem
+	option ifconfig_pool_persist /tmp/ipp.txt
+	option server_bridge "192.168.0.1 255.255.252.0 192.168.1.2 192.168.3.254"
+	option client_config_dir /etc/openvpn/ccd
+	option client_to_client 1
+	option keepalive "10 120"
+	option cipher AES-128-CBC
+	option compress lz4
+	option persist_key 1
+	option persist_tun 1
+	option user nobody
+	option status /tmp/openvpn-status.log
+	option verb 3
+	
