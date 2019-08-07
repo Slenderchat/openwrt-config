@@ -1,4 +1,3 @@
-
 package openvpn
 
 config openvpn sverdlova
@@ -11,6 +10,7 @@ config openvpn sverdlova
 	option cert /etc/pki/sverdlova.crt
 	option key /etc/pki/sverdlova.key
 	option dh /etc/pki/dh.pem
+#	option tls_auth /etc/pki/tls.key
 	option ifconfig_pool_persist /tmp/ipp.txt
 	option server_bridge "192.168.0.1 255.255.252.0 192.168.1.2 192.168.3.254"
 	option client_config_dir /etc/openvpn/ccd
@@ -23,4 +23,3 @@ config openvpn sverdlova
 	option user nobody
 	option status /tmp/openvpn-status.log
 	option verb 3
-	

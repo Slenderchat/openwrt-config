@@ -1,4 +1,3 @@
-
 config dnsmasq
 	option domainneeded '1'
 	option boguspriv '1'

@@ -1,4 +1,3 @@
-
 config 'global'
 	option	anon_swap	'0'
 	option	anon_mount	'0'
