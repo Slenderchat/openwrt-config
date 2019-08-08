@@ -23,3 +23,4 @@ config wifi-iface 'mesh'
 	option mode 'mesh'
 	option mesh_id 'Russia'
 	option mesh_fwding '0'
+

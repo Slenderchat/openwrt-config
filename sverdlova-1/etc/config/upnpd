@@ -25,3 +25,4 @@ config perm_rule
 	option int_addr '0.0.0.0/0'
 	option int_ports '0-65535'
 	option comment 'Default deny'
+

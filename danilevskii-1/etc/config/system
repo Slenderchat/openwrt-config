@@ -29,3 +29,4 @@ config led 'led_wan'
 	option sysfs 'tl-wr840n-v4:green:wan'
 	option trigger 'switch0'
 	option port_mask '0x01'
+

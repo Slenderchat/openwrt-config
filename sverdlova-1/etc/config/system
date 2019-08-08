@@ -1,5 +1,5 @@
 config system
-	option hostname 'Sverdlova-2'
+	option hostname 'Sverdlova-1'
 	option timezone 'MSK-3'
 	option ttylogin '0'
 	option log_size '64'
@@ -48,3 +48,4 @@ config led 'led_wlan'
 	option name 'WLAN'
 	option sysfs 'tp-link:green:wlan'
 	option trigger 'phy0tpt'
+
