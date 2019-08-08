@@ -17,7 +17,6 @@ config openvpn sverdlova
 	option client_to_client 1
 	option keepalive "10 120"
 	option cipher AES-128-CBC
-	option compress lz4
 	option persist_key 1
 	option persist_tun 1
 	option user nobody

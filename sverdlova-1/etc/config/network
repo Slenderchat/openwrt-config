@@ -9,10 +9,14 @@ config globals 'globals'
 
 config device 'ap'
 	option name 'ap'
-	option mtu '1440'
+	option mtu '1468'
 
 config device 'eth0'
 	option name 'eth0.1'
+	option mtu '1468'
+
+config device 'tap0'
+	option name 'tap0'
 	option mtu '1440'
 
 config interface 'lan'

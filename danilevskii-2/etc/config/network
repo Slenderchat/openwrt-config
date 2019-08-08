@@ -6,7 +6,7 @@ config interface 'loopback'
 
 config device 'ap'
 	option name 'ap'
-	option mtu '1440'
+	option mtu '1468'
 
 config interface 'lan'
 	option type 'bridge'
