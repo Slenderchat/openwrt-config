@@ -13,35 +13,37 @@ chk () {
 chkBld () {
 	if [  $? -eq 0  ]
 	then
-		echo "Build succesful";
+		echo "Building succesful";
 		let ER++;
 	else
-		echo "Build failed";
+		echo "Building failed";
 		make -j 1
 		if [  $? -eq 0  ]
 		then
-			echo "Second build attempt succesful";
+			echo "Second building attempt succesful";
 			let ER++;
 		else
-			echo "Second build attempt failed";
+			echo "Second building attempt failed";
 			exit $ER;
 		fi
-		exit $ER;
 	fi
 }
-build () {
+clean () {
 	rm -f .config
-	chk "Clean .config"
+	chk "Cleaning .config"
 	rm -rf files/*
-	chk "Clean files"
+	chk "Cleaning files"
+}
+build () {
+	clean
 	cp -f ../openwrt-config/$1/.config .config
-	chk "Copy .config"
+	chk "Copying .config"
 	cp -rf ../openwrt-config/$1/etc files
-	chk "Copy files"
+	chk "Copying files"
 	make clean
-	chk "Clean"
+	chk "Cleaning"
 	make download
-	chk "Download"
+	chk "Downloading"
 	make -j 1
 	chkBld
 	for file in bin/targets/*/*/openwrt-*-squashfs-*.bin
@@ -50,7 +52,10 @@ build () {
 		file2=${file2##*-*-*-*-*-*-*-}
 		mv $file "${file%%openwrt-*-squashfs-*.bin}${1}-${file2}"
 	done
-	chk "Copy results"
+	chk "Copying results"
+	make clean
+	chk "Cleaning"
+	clean
 }
 build "sverdlova-1"
 build "sverdlova-2"
