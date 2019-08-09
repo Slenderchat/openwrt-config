@@ -23,6 +23,4 @@ config wifi-iface 'mesh'
 	option mode 'mesh'
 	option mesh_id 'Irina'
 	option mesh_fwding '0'
-	option encryption 'psk2+ccmp'
-	option key '12051964'
 
