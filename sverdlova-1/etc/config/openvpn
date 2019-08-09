@@ -12,7 +12,7 @@ config openvpn sverdlova
 	option dh /etc/openvpn/pki/dh.pem
 	option tls_auth /etc/openvpn/pki/tls.key
 	option ifconfig_pool_persist /tmp/ipp.txt
-	option server_bridge "192.168.0.1 255.255.252.0 192.168.1.2 192.168.3.254"
+	option server_bridge "192.168.0.1 255.255.252.0 192.168.1.1 192.168.3.1"
 	option client_config_dir /etc/openvpn/ccd
 	option client_to_client 1
 	option keepalive "10 120"
