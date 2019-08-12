@@ -16,8 +16,8 @@ config dnsmasq
 	option localservice '1'
 	option localuse '1'
 	option noresolv '1'
-	list server '127.0.0.1#5054'
-	list server '127.0.0.1#5053'
+	list server '::1#5453'
+	list server '127.0.0.1#5453'
 	list server '/pool.ntp.org/1.1.1.1'
 
 config dhcp 'lan'

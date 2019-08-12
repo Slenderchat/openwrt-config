@@ -30,5 +30,5 @@ config service 'tunnelbroker'
         option check_interval '10'
         option check_unit 'minutes'
         option update_url 'http://ipv4.tunnelbroker.net/nic/update?username=[USERNAME]&password=[PASSWORD]&hostname=[DOMAIN]&myip=[IP]'
-        option lookup_host '546539'
+        option lookup_host 'danilevskii.duckdns.org'
 

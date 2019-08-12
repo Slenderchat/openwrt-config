@@ -16,7 +16,7 @@ config openvpn sverdlova
 	option client_config_dir /etc/openvpn/ccd
 	option client_to_client 1
 	option keepalive "10 120"
-	option cipher AES-128-CBC
+	option cipher AES-256-CBC
 	option persist_key 1
 	option persist_tun 1
 	option user nobody

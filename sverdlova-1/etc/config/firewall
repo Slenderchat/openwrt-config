@@ -130,9 +130,3 @@ config rule
 config include
 	option path '/etc/firewall.user'
 
-config include 'miniupnpd'
-	option type 'script'
-	option path '/usr/share/miniupnpd/firewall.include'
-	option family 'any'
-	option reload '1'
-
