@@ -19,7 +19,7 @@ config device 'ap'
 	option name 'ap'
 	option mtu '1468'
 
-config device 'tan0'
+config device 'tap0'
 	option name 'tap0'
 	option mtu '1440'
 
@@ -32,11 +32,6 @@ config interface 'lan'
 	option ip6assign '64'
 	option stp '1'
 	option igmp_snooping '1'
-	
-config interface 'lan6'
-	option ifname '@lan'
-	option proto 'dhcpv6'
-	option reqprefix '0'
 	
 config interface 'bat0'
 	option proto 'batadv'

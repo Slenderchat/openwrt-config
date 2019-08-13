@@ -22,10 +22,11 @@ config dnsmasq
 config dhcp 'lan'
 	option interface 'lan'
 	option start '3'
-	option limit '251'
+	option limit '252'
 	option leasetime '12h'
-	option dhcpv6 'server'
 	option ra 'server'
+	option ra_management '0'
+	option dhcpv6 'disabled'
 
 config dhcp 'wan'
 	option interface 'wan'
