@@ -5,7 +5,7 @@ config openvpn sverdlova
 	option local 91.205.165.159
 	option port 1194
 	option proto udp
-	option dev tap
+	option dev tap0
 	option ca /etc/openvpn/pki/ca.crt
 	option cert /etc/openvpn/pki/sverdlova.crt
 	option key /etc/openvpn/pki/sverdlova.key
@@ -16,7 +16,8 @@ config openvpn sverdlova
 	option client_config_dir /etc/openvpn/ccd
 	option client_to_client 1
 	option keepalive "10 120"
-	option cipher AES-256-CBC
+	option cipher AES-128-CBC
+	option ncp_disable 1
 	option persist_key 1
 	option persist_tun 1
 	option user nobody

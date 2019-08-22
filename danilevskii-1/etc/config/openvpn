@@ -3,9 +3,9 @@ package openvpn
 config openvpn danilevskii
 	option enabled 1
 	option client 1
-	option dev tap
+	option dev tap0
 	option proto udp
-	list remote "91.205.165.159 1194"
+	option remote "91.205.165.159 1194"
 	option resolv_retry infinite
 	option nobind 1
 	option persist_key 1
@@ -15,6 +15,7 @@ config openvpn danilevskii
 	option cert /etc/openvpn/pki/danilevskii.crt
 	option key /etc/openvpn/pki/danilevskii.key
 	option tls_auth /etc/openvpn/pki/tls.key
-	option cipher AES-256-CBC
+	option cipher AES-128-CBC
+	option ncp_disable 1
 	option verb 3
 

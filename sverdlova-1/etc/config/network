@@ -15,13 +15,9 @@ config device 'eth0'
 	option name 'eth0.1'
 	option mtu '1468'
 
-config device 'tap0'
-	option name 'tap0'
-	option mtu '1440'
-
 config interface 'lan'
 	option type 'bridge'
-	option ifname 'bat0 eth0.1'
+	option ifname 'bat0 eth0.1 tap0'
 	option proto 'static'
 	option ipaddr '192.168.0.1'
 	option netmask '255.255.252.0'
@@ -35,11 +31,6 @@ config interface 'bat0'
 	option gw_mode 'server'
 
 config interface 'wmesh'
-	option proto 'batadv_hardif'
-	option master 'bat0'
-
-config interface 'emesh'
-	option ifname 'tap0'
 	option proto 'batadv_hardif'
 	option master 'bat0'
 	
