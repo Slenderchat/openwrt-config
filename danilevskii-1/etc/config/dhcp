@@ -19,6 +19,7 @@ config dnsmasq
 	list server '::1#5453'
 	list server '127.0.0.1#5453'
 	list server '/pool.ntp.org/1.1.1.1'
+	list rev_server '192.168.0.0/24,192.168.0.1'
 
 config dhcp 'lan'
 	option interface 'lan'

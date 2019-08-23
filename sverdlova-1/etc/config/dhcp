@@ -19,11 +19,12 @@ config dnsmasq
 	list server '::1#5354'
 	list server '127.0.0.1#5353'
 	list server '/pool.ntp.org/1.1.1.1'
+	list rev_server '192.168.1.0/24,192.168.1.1'
 
 config dhcp 'lan'
 	option interface 'lan'
 	option start '3'
-	option limit '251'
+	option limit '252'
 	option leasetime '2h'
 	option ra 'server'
 	option dhcpv6 'server'
