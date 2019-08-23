@@ -3,7 +3,7 @@ package openvpn
 config openvpn danilevskii
 	option enabled 1
 	option client 1
-	option dev tap0
+	option dev tun0
 	option proto udp
 	option remote "91.205.165.159 1194"
 	option resolv_retry infinite

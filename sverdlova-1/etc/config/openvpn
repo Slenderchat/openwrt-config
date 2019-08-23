@@ -5,14 +5,14 @@ config openvpn sverdlova
 	option local 91.205.165.159
 	option port 1194
 	option proto udp
-	option dev tap0
+	option dev tun0
 	option ca /etc/openvpn/pki/ca.crt
 	option cert /etc/openvpn/pki/sverdlova.crt
 	option key /etc/openvpn/pki/sverdlova.key
 	option dh /etc/openvpn/pki/dh.pem
 	option tls_auth /etc/openvpn/pki/tls.key
-	option ifconfig_pool_persist /tmp/ipp.txt
-	option server_bridge "192.168.0.1 255.255.252.0 192.168.1.1 192.168.3.1"
+	option server "192.168.0.0 255.255.252.0 nopool"
+	option topology subnet
 	option client_config_dir /etc/openvpn/ccd
 	option client_to_client 1
 	option keepalive "10 120"
