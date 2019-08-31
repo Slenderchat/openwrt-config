@@ -14,10 +14,6 @@ config device 'lan_dev'
 config device 'wan_dev'
 	option name 'eth0.2'
 	option macaddr '7c:8b:ca:b4:4c:f1'
-	
-config device 'ap'
-	option name 'ap'
-	option mtu '1468'
 
 config interface 'lan'
 	option type 'bridge'
@@ -31,7 +27,6 @@ config interface 'lan'
 	
 config interface 'bat0'
 	option proto 'batadv'
-	option fragmentation '0'
 	option gw_bandwidth '100000/100000'
 	option gw_mode 'server'
 
@@ -43,6 +38,7 @@ config interface 'lmesh'
 config interface 'wmesh'
 	option proto 'batadv_hardif'
 	option master 'bat0'
+	option mtu '1532'
 
 config interface 'wan'
 	option ifname 'eth0.2'

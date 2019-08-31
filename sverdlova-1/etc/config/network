@@ -7,14 +7,6 @@ config interface 'loopback'
 config globals 'globals'
 	option ula_prefix 'fd79:aa92:ec34::/48'
 
-config device 'ap'
-	option name 'ap'
-	option mtu '1468'
-
-config device 'eth0'
-	option name 'eth0.1'
-	option mtu '1468'
-
 config interface 'lan'
 	option type 'bridge'
 	option ifname 'bat0 eth0.1'
@@ -27,13 +19,13 @@ config interface 'lan'
 	
 config interface 'bat0'
 	option proto 'batadv'
-	option fragmentation '0'
 	option gw_bandwidth '100000/100000'
 	option gw_mode 'server'
 
 config interface 'wmesh'
 	option proto 'batadv_hardif'
 	option master 'bat0'
+	option mtu '1532'
 	
 config interface 'wan'
 	option ifname 'eth1'

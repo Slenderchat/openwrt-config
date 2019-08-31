@@ -4,10 +4,6 @@ config interface 'loopback'
 	option ipaddr '127.0.0.1'
 	option netmask '255.0.0.0'
 
-config device 'ap'
-	option name 'ap'
-	option mtu '1468'
-
 config interface 'lan'
 	option type 'bridge'
 	option ifname 'bat0'
@@ -26,7 +22,6 @@ config interface 'lan6'
 	
 config interface 'bat0'
 	option proto 'batadv'
-	option fragmentation '0'
 	option gw_mode 'client'
 	
 config interface 'lmesh'
@@ -42,6 +37,7 @@ config interface 'l2mesh'
 config interface 'wmesh'
 	option proto 'batadv_hardif'
 	option master 'bat0'
+	option mtu '1532'
 
 config switch
 	option name 'switch0'
