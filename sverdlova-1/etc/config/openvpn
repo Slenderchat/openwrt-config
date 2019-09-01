@@ -1,3 +1,4 @@
+
 package openvpn
 
 config openvpn sverdlova
@@ -17,7 +18,7 @@ config openvpn sverdlova
 	option client_to_client 1
 	option keepalive "10 120"
 	option cipher AES-128-GCM
-	option auth SHA256
+	option auth SHA224
 	option ncp_disable 1
 	option persist_key 1
 	option persist_tun 1

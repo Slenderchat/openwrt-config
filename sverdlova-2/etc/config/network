@@ -1,3 +1,4 @@
+
 config interface 'loopback'
 	option ifname 'lo'
 	option proto 'static'
@@ -18,7 +19,6 @@ config interface 'lan'
 config interface 'lan6'
 	option ifname '@lan'
 	option proto 'dhcpv6'
-	option reqprefix '0'
 
 config interface 'bat0'
 	option proto 'batadv'

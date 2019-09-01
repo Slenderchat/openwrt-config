@@ -1,3 +1,4 @@
+
 package openvpn
 
 config openvpn danilevskii
@@ -16,7 +17,7 @@ config openvpn danilevskii
 	option key /etc/openvpn/pki/danilevskii.key
 	option tls_auth /etc/openvpn/pki/tls.key
 	option cipher AES-128-GCM
-	option auth SHA256
+	option auth SHA224
 	option ncp_disable 1
 	option verb 3
 

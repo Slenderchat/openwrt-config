@@ -1,3 +1,4 @@
+
 config wifi-device 'radio0'
 	option type 'mac80211'
 	option channel '6'
@@ -15,7 +16,6 @@ config wifi-iface 'ap'
 	option ssid 'Russia'
 	option encryption 'psk2+ccmp'
 	option key 'vovavova'
-	option ieee80211w '1'
 
 config wifi-iface 'mesh'
 	option device 'radio0'

@@ -1,3 +1,4 @@
+
 config system
 	option hostname 'Danilevskii-4'
 	option timezone 'MSK-3'

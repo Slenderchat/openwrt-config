@@ -1,3 +1,4 @@
+
 config system
 	option hostname 'Sverdlova-1'
 	option timezone 'MSK-3'
