@@ -1,21 +1,25 @@
 
 config stubby 'global'
-       option manual '0'
-       option trigger 'wan'
-       option dns_transport 'GETDNS_TRANSPORT_TLS'
-       option tls_authentication '1'
-       option tls_query_padding_blocksize '128'
-       option appdata_dir '/var/lib/stubby'
-       option edns_client_subnet_private '1'
-       option idle_timeout '10000'
-       option round_robin_upstreams '1'
-       option listen_address '127.0.0.1@5453'
-
+	option manual '0'
+	option trigger 'wan'
+	list dns_transport 'GETDNS_TRANSPORT_TLS'
+	option tls_authentication '1'
+	option tls_query_padding_blocksize '128'
+	option dnssec_return_status '0'
+	option appdata_dir '/var/lib/stubby'
+	option edns_client_subnet_private '1'
+	option round_robin_upstreams '1'
+	list listen_address '127.0.0.1@5453'
+	list listen_address '0::1@5453'
+	option tls_min_version '1.2'
+	
 config resolver
-       option address '1.1.1.1'
-       option tls_auth_name 'cloudflare-dns.com'
-
+	option address '1.1.1.1'
+	option tls_auth_name 'cloudflare-dns.com'
+	option tls_min_version '1.2'
+	
 config resolver
-       option address '1.0.0.1'
-       option tls_auth_name 'cloudflare-dns.com'
+	option address '1.0.0.1'
+	option tls_auth_name 'cloudflare-dns.com'
+	option tls_min_version '1.2'
 
