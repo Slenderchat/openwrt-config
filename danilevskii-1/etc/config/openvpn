@@ -11,7 +11,6 @@ config openvpn danilevskii
 	option nobind 1
 	option persist_key 1
 	option persist_tun 1
-	option user nobody
 	option ca /etc/openvpn/pki/ca.crt
 	option cert /etc/openvpn/pki/danilevskii.crt
 	option key /etc/openvpn/pki/danilevskii.key

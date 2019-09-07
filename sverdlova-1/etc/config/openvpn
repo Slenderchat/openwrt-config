@@ -24,7 +24,6 @@ config openvpn sverdlova
 	option ncp_disable 1
 	option persist_key 1
 	option persist_tun 1
-	option user nobody
 	option status /tmp/openvpn-status.log
 	option verb 3
 
