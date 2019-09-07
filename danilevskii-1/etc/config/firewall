@@ -30,6 +30,13 @@ config forwarding
 	option dest 'wan'
 
 config rule
+        option name 'Allow-OpenVPN'
+        option src 'wan'
+        option dest_port '1194'
+        option proto 'udp'
+        option target 'ACCEPT'
+
+config rule
 	option name 'Allow-DHCP-Renew'
 	option src 'wan'
 	option proto 'udp'
