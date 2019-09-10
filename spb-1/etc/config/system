@@ -1,0 +1,33 @@
+
+config system
+	option hostname 'Spb-1'
+	option timezone 'MSK-3'
+	option ttylogin '0'
+	option log_size '64'
+	option urandom_seed '0'
+
+config timeserver 'ntp'
+	option enabled '1'
+	option enable_server '0'
+	list server '0.openwrt.pool.ntp.org'
+	list server '1.openwrt.pool.ntp.org'
+	list server '2.openwrt.pool.ntp.org'
+	list server '3.openwrt.pool.ntp.org'
+
+config led 'led_wlan2g'
+	option name 'wlan2g'
+	option sysfs 'tl-wr840n-v4:green:wlan'
+	option trigger 'phy0tpt'
+
+config led 'led_lan'
+	option name 'lan'
+	option sysfs 'tl-wr840n-v4:green:lan'
+	option trigger 'switch0'
+	option port_mask '0x1e'
+
+config led 'led_wan'
+	option name 'wan'
+	option sysfs 'tl-wr840n-v4:green:wan'
+	option trigger 'switch0'
+	option port_mask '0x01'
+
