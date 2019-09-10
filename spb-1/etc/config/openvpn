@@ -1,0 +1,25 @@
+
+package openvpn
+
+config openvpn spb
+	option enabled 1
+	option client 1
+	option dev tun0
+	option proto udp
+	option remote "91.205.165.159 1194"
+	option resolv_retry infinite
+	option nobind 1
+	option persist_key 1
+	option persist_tun 1
+	option ca /etc/openvpn/pki/ca.crt
+	option cert /etc/openvpn/pki/spb.crt
+	option key /etc/openvpn/pki/spb.key
+	option tls_crypt /etc/openvpn/pki/tls.key
+	option fast_io 1
+	option remote_cert_tls server
+	option cipher AES-128-GCM
+	option auth SHA224
+	option auth_nocache 1
+	option ncp_disable 1
+	option verb 3
+

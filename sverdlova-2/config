@@ -2,23 +2,29 @@ CONFIG_TARGET_ramips=y
 CONFIG_TARGET_ramips_rt305x=y
 CONFIG_TARGET_ramips_rt305x_DEVICE_dlink_dir-300-b7=y
 CONFIG_DEVEL=y
+CONFIG_TOOLCHAINOPTS=y
 CONFIG_AUTOREMOVE=y
 CONFIG_BATMAN_ADV_BLA=y
 CONFIG_BATMAN_ADV_DAT=y
 CONFIG_BATMAN_ADV_MCAST=y
 CONFIG_BATMAN_ADV_SYSFS=y
+# CONFIG_BINUTILS_USE_VERSION_2_31_1 is not set
+CONFIG_BINUTILS_USE_VERSION_2_32=y
+CONFIG_BINUTILS_VERSION="2.32"
+CONFIG_BINUTILS_VERSION_2_32=y
 CONFIG_CLEAN_IPKG=y
-# CONFIG_KERNEL_CRASHLOG is not set
+CONFIG_GCC_USE_EMBEDDED_PATH_REMAP=y
+# CONFIG_GCC_USE_VERSION_7 is not set
+CONFIG_GCC_USE_VERSION_9=y
+CONFIG_GCC_VERSION="9.2.0"
+CONFIG_GCC_VERSION_9=y
+# CONFIG_GDB is not set
 # CONFIG_KERNEL_MAGIC_SYSRQ is not set
-# CONFIG_KERNEL_PRINTK is not set
-# CONFIG_KERNEL_PRINTK_TIME is not set
-CONFIG_KERNEL_SQUASHFS_FRAGMENT_CACHE_SIZE=1
 CONFIG_KERNEL_SWAP=y
 # CONFIG_PACKAGE_MAC80211_DEBUGFS is not set
 CONFIG_PACKAGE_batctl-default=y
 # CONFIG_PACKAGE_dnsmasq is not set
 # CONFIG_PACKAGE_firewall is not set
-# CONFIG_PACKAGE_getrandom is not set
 # CONFIG_PACKAGE_ip6tables is not set
 # CONFIG_PACKAGE_iptables is not set
 CONFIG_PACKAGE_kmod-batman-adv=y
@@ -52,8 +58,6 @@ CONFIG_PACKAGE_librt=y
 # CONFIG_PACKAGE_opkg is not set
 # CONFIG_PACKAGE_ppp is not set
 # CONFIG_PACKAGE_uclient-fetch is not set
-# CONFIG_PACKAGE_urandom-seed is not set
-# CONFIG_PACKAGE_urngd is not set
 # CONFIG_PACKAGE_usign is not set
 CONFIG_PACKAGE_wpad-basic=y
 # CONFIG_PACKAGE_wpad-mini is not set
@@ -173,6 +177,7 @@ CONFIG_PACKAGE_kmod-nf-flow=y
 # CONFIG_TARGET_ath79_generic_DEVICE_tplink_re355-v1 is not set
 # CONFIG_TARGET_ath79_generic_DEVICE_tplink_re450-v1 is not set
 # CONFIG_TARGET_ath79_generic_DEVICE_tplink_re450-v2 is not set
+# CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr3500-v1 is not set
 # CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr3600-v1 is not set
 # CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr4300-v1 is not set
 # CONFIG_TARGET_ath79_generic_DEVICE_tplink_tl-wdr4900-v2 is not set
