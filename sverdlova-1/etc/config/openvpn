@@ -11,9 +11,9 @@ config openvpn sverdlova
 	option cert /etc/openvpn/pki/sverdlova.crt
 	option key /etc/openvpn/pki/sverdlova.key
 	option dh /etc/openvpn/pki/dh.pem
-	option tls_crypt /etc/openvpn/pki/tls.key
+	option tls_auth /etc/openvpn/pki/tls.key
 	option remote_cert_tls client
-	option server "192.168.0.0 255.255.0.0 nopool"
+	option server "192.168.0.0 255.255.252.0 nopool"
 	option topology subnet
 	option client_config_dir /etc/openvpn/ccd
 	option client_to_client 1
@@ -24,6 +24,5 @@ config openvpn sverdlova
 	option ncp_disable 1
 	option persist_key 1
 	option persist_tun 1
-	option status /tmp/openvpn-status.log
 	option verb 3
 

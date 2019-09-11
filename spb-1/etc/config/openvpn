@@ -14,7 +14,7 @@ config openvpn spb
 	option ca /etc/openvpn/pki/ca.crt
 	option cert /etc/openvpn/pki/spb.crt
 	option key /etc/openvpn/pki/spb.key
-	option tls_crypt /etc/openvpn/pki/tls.key
+	option tls_auth /etc/openvpn/pki/tls.key
 	option fast_io 1
 	option remote_cert_tls server
 	option cipher AES-128-GCM
