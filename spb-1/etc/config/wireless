@@ -15,6 +15,7 @@ config wifi-iface 'default_radio0'
 	option ssid 'room109'
 	option encryption 'psk2+ccmp'
 	option key '109901109'
+	option ieee80211w '1'
 
 config wifi-device 'radio1'
 	option type 'mac80211'
