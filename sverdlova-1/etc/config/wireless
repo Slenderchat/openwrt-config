@@ -1,9 +1,9 @@
 
 config wifi-device 'radio0'
 	option type 'mac80211'
-	option path 'platform/ahb/18100000.wmac'
 	option channel '6'
 	option hwmode '11g'
+	option path 'platform/qca953x_wmac'
 	option htmode 'HT20'
 	option legacy_rates '0'
 	option country 'US'
