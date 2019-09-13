@@ -1,1 +1,1 @@
-0 2 * * * sleep 70 && touch /etc/banner && reboot
+0 2 * * * sleep 70 && touch /etc/banner && jffs2reset && reboot
