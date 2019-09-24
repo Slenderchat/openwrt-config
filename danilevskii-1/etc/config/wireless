@@ -1,7 +1,7 @@
 
 config wifi-device '2G'
 	option type 'mac80211'
-	option channel '6'
+	option channel '11'
 	option hwmode '11g'
 	option path 'platform/10300000.wmac'
 	option htmode 'HT20'
