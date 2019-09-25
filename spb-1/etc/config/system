@@ -1,6 +1,6 @@
 
 config system
-	option hostname 'Danilevskii-1'
+	option hostname 'Spb-1'
 	option timezone 'MSK-3'
 	option ttylogin '0'
 	option log_size '64'
@@ -14,20 +14,29 @@ config timeserver 'ntp'
 	list server '2.openwrt.pool.ntp.org'
 	list server '3.openwrt.pool.ntp.org'
 
-config led 'led_wlan2g'
-	option name 'wlan2g'
-	option sysfs 'tl-wr840n-v4:green:wlan'
-	option trigger 'phy0tpt'
-
 config led 'led_lan'
 	option name 'lan'
-	option sysfs 'tl-wr840n-v4:green:lan'
+	option sysfs 'archer-c50-v1:green:lan'
 	option trigger 'switch0'
 	option port_mask '0x1e'
 
 config led 'led_wan'
 	option name 'wan'
-	option sysfs 'tl-wr840n-v4:green:wan'
+	option sysfs 'archer-c50-v1:green:wan'
 	option trigger 'switch0'
 	option port_mask '0x01'
+
+config led 'led_wlan2g'
+	option name 'wlan2g'
+	option sysfs 'archer-c50-v1:green:wlan2g'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'ap_2G'
+
+config led 'led_wifi_led'
+	option name 'wifi'
+	option sysfs 'archer-c50-v1:green:wlan5g'
+	option trigger 'netdev'
+	option mode 'link tx rx'
+	option dev 'ap_5G'
 
