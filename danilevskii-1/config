@@ -334,5 +334,4 @@ CONFIG_USE_MKLIBS=y
 # CONFIG_TARGET_ramips_rt288x_DEVICE_buffalo_wzr-agl300nh is not set
 # CONFIG_TARGET_ramips_rt288x_DEVICE_dlink_dap-1522-a1 is not set
 # CONFIG_TARGET_ramips_rt288x_DEVICE_ralink_v11st-fe is not set
-CONFIG_PACKAGE_rng-tools=y
 CONFIG_PACKAGE_haveged=y

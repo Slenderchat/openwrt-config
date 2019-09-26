@@ -219,5 +219,4 @@ CONFIG_USE_MKLIBS=y
 # CONFIG_TARGET_ath79_generic_Default is not set
 # CONFIG_TARGET_ath79_nand is not set
 # CONFIG_TARGET_ath79_tiny is not set
-CONFIG_PACKAGE_rng-tools=y
 CONFIG_PACKAGE_haveged=y
