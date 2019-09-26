@@ -2,6 +2,5 @@
 config dropbear
 	option PasswordAuth	'0'
 	option RootPasswordAuth	'0'
-	option rsakeyfile	'/etc/dropbear/id_dropbear'
 	option Port		'22'
 
