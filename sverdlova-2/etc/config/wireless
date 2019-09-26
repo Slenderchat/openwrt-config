@@ -19,7 +19,7 @@ config wifi-iface 'ap_2G'
 
 config wifi-iface 'mesh'
 	option device '2G'
-	option ifname 'mesh'
+	option ifname 'mesh_2G'
 	option network 'wmesh'
 	option mode 'mesh'
 	option mesh_fwding '0'
