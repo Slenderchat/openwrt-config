@@ -4,7 +4,7 @@ config wifi-device '5G'
 	option channel '36'
 	option hwmode '11a'
 	option path 'pci0000:00/0000:00:00.0/0000:01:00.0'
-	option htmode 'VHT20'
+	option htmode 'VHT40'
 	option legacy_rates '0'
 	option country 'US'
 
