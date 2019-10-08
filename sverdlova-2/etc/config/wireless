@@ -1,4 +1,3 @@
-
 config wifi-device '2G'
 	option type 'mac80211'
 	option channel '6'
@@ -24,4 +23,3 @@ config wifi-iface 'mesh'
 	option mode 'mesh'
 	option mesh_fwding '0'
 	option mesh_id 'Russia'
-

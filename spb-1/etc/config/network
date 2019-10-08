@@ -1,4 +1,3 @@
-
 config interface 'loopback'
 	option ifname 'lo'
 	option proto 'static'
@@ -50,4 +49,3 @@ config switch_vlan
 	option device 'switch0'
 	option vlan '2'
 	option ports '0 6t'
-

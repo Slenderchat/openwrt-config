@@ -1,4 +1,3 @@
-
 config wifi-device '2G'
 	option type 'mac80211'
 	option channel '11'
@@ -28,4 +27,3 @@ config wifi-iface 'mesh'
 	option encryption 'psk2+ccmp'
 	option key '12051964'
 	option ieee80211w '1'
-
