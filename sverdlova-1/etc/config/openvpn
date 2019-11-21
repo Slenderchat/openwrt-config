@@ -16,7 +16,7 @@ config openvpn sverdlova
 	option tls_server '1'
 	option topology 'subnet'
 	option ifconfig '192.168.0.1 255.255.0.0'
-	option ifconfig_pool '192.168.3.1 192.168.254.254 255.255.0.0'
+	option ifconfig_pool '192.168.4.1 192.168.254.254 255.255.0.0'
 	option remote_cert_tls 'client'
 	option client_to_client '1'
 	option keepalive '10 120'
