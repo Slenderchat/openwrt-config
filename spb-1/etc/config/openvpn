@@ -5,7 +5,7 @@ config openvpn spb
 	option client 1
 	option dev tun0
 	option proto udp
-	option remote "91.205.165.159 1194"
+	option remote '91.205.165.159 1194'
 	option resolv_retry infinite
 	option nobind 1
 	option persist_key 1
@@ -17,5 +17,8 @@ config openvpn spb
 	option fast_io 1
 	option remote_cert_tls server
 	option auth SHA224
+	option ncp_disable 1
+	option cipher AES-128-GCM
+	option compress lzo
 	option auth_nocache 1
 	option verb 3
