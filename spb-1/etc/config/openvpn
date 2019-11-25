@@ -10,10 +10,10 @@ config openvpn spb
 	option nobind 1
 	option persist_key 1
 	option persist_tun 1
-	option ca /etc/openvpn/pki/ca.crt
-	option cert /etc/openvpn/pki/spb.crt
-	option key /etc/openvpn/pki/spb.key
-	option tls_crypt /etc/openvpn/pki/tls.key
+	option ca /etc/openvpn/pki/CA.crt
+	option cert /etc/openvpn/pki/Spb.crt
+	option key /etc/openvpn/pki/Spb.key
+	option tls_crypt /etc/openvpn/pki/TLS.key
 	option fast_io 1
 	option remote_cert_tls server
 	option auth SHA224

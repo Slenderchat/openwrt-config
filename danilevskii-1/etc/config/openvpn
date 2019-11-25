@@ -10,10 +10,10 @@ config openvpn danilevskii
 	option nobind 1
 	option persist_key 1
 	option persist_tun 1
-	option ca /etc/openvpn/pki/ca.crt
-	option cert /etc/openvpn/pki/danilevskii.crt
-	option key /etc/openvpn/pki/danilevskii.key
-	option tls_crypt /etc/openvpn/pki/tls.key
+	option ca /etc/openvpn/pki/CA.crt
+	option cert /etc/openvpn/pki/Danilevskii.crt
+	option key /etc/openvpn/pki/Danilevskii.key
+	option tls_crypt /etc/openvpn/pki/TLS.key
 	option fast_io 1
 	option remote_cert_tls server
 	option auth SHA224

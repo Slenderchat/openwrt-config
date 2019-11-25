@@ -6,11 +6,11 @@ config openvpn sverdlova
 	option port 1194
 	option proto udp
 	option dev tun0
-	option ca /etc/openvpn/pki/ca.crt
-	option cert /etc/openvpn/pki/sverdlova.crt
-	option key /etc/openvpn/pki/sverdlova.key
-	option dh /etc/openvpn/pki/dh.pem
-	option tls_crypt /etc/openvpn/pki/tls.key
+	option ca /etc/openvpn/pki/CA.crt
+	option cert /etc/openvpn/pki/Sverdlova.crt
+	option key /etc/openvpn/pki/Sverdlova.key
+	option dh /etc/openvpn/pki/DH.pem
+	option tls_crypt /etc/openvpn/pki/TLS.key
 	option client_config_dir /etc/openvpn/ccd
 	option mode server
 	option tls_server 1
