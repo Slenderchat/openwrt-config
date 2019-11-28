@@ -15,6 +15,7 @@ config interface 'lan'
 	option netmask '255.255.255.0'
 	option ip6assign '64'
 	option igmp_snooping '1'
+	option stp '1'
 
 config interface 'wan'
 	option ifname 'eth0.2'
