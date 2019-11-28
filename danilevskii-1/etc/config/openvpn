@@ -1,11 +1,12 @@
 package openvpn
 
-config openvpn danilevskii
+config openvpn client
 	option enabled 1
 	option client 1
-	option dev tun0
+	option dev tun
 	option proto udp
-	option remote '91.205.165.159 1194'
+	list remote '91.205.165.159'
+	list remote '88.201.139.181'
 	option resolv_retry infinite
 	option nobind 1
 	option persist_key 1
@@ -17,7 +18,6 @@ config openvpn danilevskii
 	option fast_io 1
 	option remote_cert_tls server
 	option auth SHA224
-	option auth_nocache 1
 	option ncp_disable 1
 	option cipher AES-128-GCM
 	option compress lzo

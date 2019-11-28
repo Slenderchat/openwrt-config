@@ -1,22 +1,20 @@
 package openvpn
 
-config openvpn sverdlova
+config openvpn server
 	option enabled 1
-	option local 91.205.165.159
-	option port 1194
 	option proto udp
-	option dev tun0
+	option dev tun
 	option ca /etc/openvpn/pki/CA.crt
 	option cert /etc/openvpn/pki/Sverdlova.crt
 	option key /etc/openvpn/pki/Sverdlova.key
 	option dh /etc/openvpn/pki/DH.pem
 	option tls_crypt /etc/openvpn/pki/TLS.key
 	option client_config_dir /etc/openvpn/ccd
+	option ccd_exclusive 1
 	option mode server
 	option tls_server 1
 	option topology subnet
-	option ifconfig '192.168.0.1 255.255.0.0'
-	option ifconfig_pool '192.168.3.2 192.168.254.254 255.255.0.0'
+	option ifconfig '192.168.0.1 255.255.252.0'
 	option remote_cert_tls client
 	option client_to_client 1
 	option keepalive '10 120'
@@ -34,3 +32,25 @@ config openvpn sverdlova
 	list push 'route-gateway 192.168.0.1'
 	list push 'route 192.168.1.0 255.255.255.0 192.168.1.1'
 	list push 'route 192.168.2.0 255.255.255.0 192.168.2.1'
+
+config openvpn client
+	option enabled 1
+	option client 1
+	option dev tun
+	option proto udp
+	option remote '88.201.139.181'
+	option resolv_retry infinite
+	option nobind 1
+	option persist_key 1
+	option persist_tun 1
+	option ca /etc/openvpn/pki/CA.crt
+	option cert /etc/openvpn/pki/Sverdlova.crt
+	option key /etc/openvpn/pki/Sverdlova.key
+	option tls_crypt /etc/openvpn/pki/TLS.key
+	option fast_io 1
+	option remote_cert_tls server
+	option auth SHA224
+	option ncp_disable 1
+	option cipher AES-128-GCM
+	option compress lzo
+	option verb 3

@@ -10,6 +10,7 @@ config zone
 	option name 'lan'
 	list network 'lan'
 	list device 'tun0'
+	list device 'tun1'
 	option input 'ACCEPT'
 	option output 'ACCEPT'
 	option forward 'ACCEPT'
