@@ -20,5 +20,6 @@ config openvpn client
 	option auth SHA224
 	option ncp_disable 1
 	option cipher AES-128-GCM
-	option compress lzo
+	option comp_lzo adaptive
 	option verb 3
+	option pull_filter 'ignore "route 192.168.1.0 255.255.255.0"'

@@ -22,14 +22,13 @@ config openvpn server
 	option auth SHA224
 	option ncp_disable 1
 	option cipher AES-128-GCM
-	option compress lzo
+	option comp_lzo adaptive
 	option persist_key 1
 	option persist_tun 1
 	option verb 3
-	list route '192.168.1.0 255.255.255.0 192.168.1.1'
-	list route '192.168.2.0 255.255.255.0 192.168.2.1'
 	list push 'topology subnet'
 	list push 'route-gateway 192.168.0.1'
+	list push 'route 192.168.0.0 255.255.255.0 192.168.0.1'
 	list push 'route 192.168.1.0 255.255.255.0 192.168.1.1'
 	list push 'route 192.168.2.0 255.255.255.0 192.168.2.1'
 
@@ -52,5 +51,6 @@ config openvpn client
 	option auth SHA224
 	option ncp_disable 1
 	option cipher AES-128-GCM
-	option compress lzo
+	option comp_lzo adaptive
 	option verb 3
+	option pull_filter 'ignore "route 192.168.0.0 255.255.255.0"'
