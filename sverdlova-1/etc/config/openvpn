@@ -27,7 +27,6 @@ config openvpn server
 	option persist_tun 1
 	option verb 3
 	list push 'topology subnet'
-	list push 'route-gateway 192.168.0.1'
 	list push 'route 192.168.0.0 255.255.255.0 192.168.0.1'
 	list push 'route 192.168.1.0 255.255.255.0 192.168.1.1'
 	list push 'route 192.168.2.0 255.255.255.0 192.168.2.1'
