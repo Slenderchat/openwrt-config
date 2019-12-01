@@ -1,2 +1,2 @@
-0 3 * * * sleep 70 && touch /etc/banner && jffs2reset -y && reboot
-0 */6 * * * wget http://ipv4.tunnelbroker.net/nic/update?username=Slenderchat&password=iG-YT3PEEb9hMvM-&hostname=546539&myip=$(ifconfig eth0.2 | sed -nE 's/.*inet addr:(.*) Bcast:.*/\1/gp')
+0 5 * * * sleep 70 && touch /etc/banner && jffs2reset -y && reboot
+0 */1 * * * wget http://ipv4.tunnelbroker.net/nic/update?username=Slenderchat&password=iG-YT3PEEb9hMvM-&hostname=546539&myip=$(ifconfig eth0.2 | sed -nE 's/.*inet addr:(.*) Bcast:.*/\1/gp')
