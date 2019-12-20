@@ -1,21 +1,21 @@
 config system
-	option hostname 'Sverdlova-2'
-	option timezone 'MSK-3'
-	option ttylogin '0'
-	option log_size '64'
-	option urandom_seed '0'
+	option hostname Sverdlova-2
+	option timezone MSK-3
+	option ttylogin 0
+	option log_size 64
+	option urandom_seed 0
 
-config timeserver 'ntp'
-	option enabled '1'
-	option enable_server '0'
-	list server '0.ru.pool.ntp.org'
-	list server '1.ru.pool.ntp.org'
-	list server '2.ru.pool.ntp.org'
-	list server '3.ru.pool.ntp.org'
+config timeserver ntp
+	option enabled 1
+	option enable_server 0
+	list server 0.ru.pool.ntp.org
+	list server 1.ru.pool.ntp.org
+	list server 2.ru.pool.ntp.org
+	list server 3.ru.pool.ntp.org
 
-config led 'led_wifi_led'
-	option name 'wifi'
-	option sysfs 'rt2800pci-phy0::radio'
-	option trigger 'netdev'
+config led led_wifi_led
+	option name wifi
+	option sysfs rt2800pci-phy0::radio
+	option trigger netdev
 	option mode 'link tx rx'
-	option dev 'ap_2G'
+	option dev ap_2G

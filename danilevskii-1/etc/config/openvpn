@@ -5,8 +5,8 @@ config openvpn client
 	option client 1
 	option dev tun
 	option proto udp
-	list remote '91.205.165.159'
-	list remote '88.201.139.181'
+	list remote 91.205.165.159
+	list remote 88.201.139.181
 	option resolv_retry infinite
 	option nobind 1
 	option persist_key 1

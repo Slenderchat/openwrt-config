@@ -1,25 +1,25 @@
-config wifi-device '2G'
-	option type 'mac80211'
-	option channel '6'
-	option hwmode '11g'
-	option path 'platform/10180000.wmac'
-	option htmode 'HT20'
-	option legacy_rates '0'
-	option country 'US'
+config wifi-device 2G
+	option type mac80211
+	option channel 1
+	option hwmode 11g
+	option path platform/10180000.wmac
+	option htmode HT20
+	option legacy_rates 0
+	option country US
 
-config wifi-iface 'ap_2G'
-	option device '2G'
-	option ifname 'ap_2G'
-	option network 'lan'
-	option mode 'ap'
-	option ssid 'Russia'
-	option encryption 'psk2+ccmp'
-	option key 'vovavova'
+config wifi-iface ap_2G
+	option device 2G
+	option ifname ap_2G
+	option network lan
+	option mode ap
+	option ssid Russia
+	option encryption sae-mixed
+	option key vovavova
 
-config wifi-iface 'mesh'
-	option device '2G'
-	option ifname 'mesh_2G'
-	option network 'wmesh'
-	option mode 'mesh'
-	option mesh_fwding '0'
-	option mesh_id 'Russia'
+config wifi-iface mesh
+	option device 2G
+	option ifname mesh_2G
+	option network wmesh
+	option mode mesh
+	option mesh_fwding 0
+	option mesh_id Russia
