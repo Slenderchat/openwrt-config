@@ -22,4 +22,4 @@ config openvpn client
 	option cipher AES-128-GCM
 	option comp_lzo adaptive
 	option verb 3
-	option pull_filter 'ignore "route 192.168.1.0 255.255.255.0"'
+#	option pull_filter 'ignore "route 172.16.1.0 255.255.255.0"'

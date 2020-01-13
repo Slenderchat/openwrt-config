@@ -5,27 +5,26 @@ config interface loopback
 	option netmask 255.0.0.0
 
 config globals globals
-	option ula_prefix fd79:aa92:ec34::/48
+	option ula_prefix auto
 
 config interface lan
 	option type bridge
 	option ifname 'bat0 eth0.1'
 	option proto static
-	option ipaddr 192.168.0.1
+	option ipaddr 172.16.0.1
 	option netmask 255.255.255.0
 	option ip6assign 64
 	option igmp_snooping 1
 	option stp 1
+	option macaddr c4:6e:1f:93:ab:e5
 
 config interface bat0
 	option proto batadv
-	option gw_bandwidth 100000/100000
-	option gw_mode server
 
 config interface wmesh
 	option proto batadv_hardif
 	option master bat0
-	option mtu 1532
+	option mtu 2304
 	
 config interface wan
 	option ifname eth1

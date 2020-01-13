@@ -18,14 +18,14 @@ config dnsmasq
 	option noresolv 1
 	list server '127.0.0.1#5353'
 	list server /pool.ntp.org/1.1.1.1
-	list rev_server 192.168.1.0/24,192.168.1.1
-	list rev_server 192.168.2.0/24,192.168.2.1
+	list rev_server 172.16.1.0/24,172.16.1.1
+	list rev_server 172.16.2.0/24,172.16.2.1
 
 config dhcp lan
 	option interface lan
 	option start 3
 	option limit 252
-	option leasetime 2h
+	option leasetime 12h
 	option dhcpv6 server
 	option ra server
 

@@ -14,7 +14,7 @@ config openvpn server
 	option mode server
 	option tls_server 1
 	option topology subnet
-	option ifconfig '192.168.0.1 255.255.252.0'
+	option ifconfig '172.16.0.1 255.255.252.0'
 	option remote_cert_tls client
 	option client_to_client 1
 	option keepalive '10 120'
@@ -27,9 +27,9 @@ config openvpn server
 	option persist_tun 1
 	option verb 3
 	list push 'topology subnet'
-	list push 'route 192.168.0.0 255.255.255.0 192.168.0.1'
-	list push 'route 192.168.1.0 255.255.255.0 192.168.1.1'
-	list push 'route 192.168.2.0 255.255.255.0 192.168.2.1'
+#	list push 'route 172.16.0.0 255.255.255.0 172.16.0.1'
+#	list push 'route 172.16.1.0 255.255.255.0 172.16.1.1'
+#	list push 'route 172.16.2.0 255.255.255.0 172.16.2.1'
 
 config openvpn client
 	option enabled 1
@@ -52,4 +52,4 @@ config openvpn client
 	option cipher AES-128-GCM
 	option comp_lzo adaptive
 	option verb 3
-	option pull_filter 'ignore "route 192.168.0.0 255.255.255.0"'
+#	option pull_filter 'ignore "route 172.16.0.0 255.255.255.0"'

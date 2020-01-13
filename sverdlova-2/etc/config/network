@@ -8,12 +8,13 @@ config interface lan
 	option type bridge
 	option ifname 'bat0 eth0.1'
 	option proto static
-	option ipaddr 192.168.0.2
+	option ipaddr 172.16.0.2
 	option netmask 255.255.255.0
-	option gateway 192.168.0.1
-	option dns 192.168.0.1
+	option gateway 172.16.0.1
+	option dns 172.16.0.1
 	option igmp_snooping 1
 	option stp 1
+	option macaddr cc:b2:55:a0:39:73
 	
 config interface lan6
 	option ifname @lan
@@ -21,12 +22,11 @@ config interface lan6
 
 config interface bat0
 	option proto batadv
-	option gw_mode client
 
 config interface wmesh
 	option proto batadv_hardif
 	option master bat0
-	option mtu 1532
+	option mtu 2304
 
 config switch
 	option name switch0

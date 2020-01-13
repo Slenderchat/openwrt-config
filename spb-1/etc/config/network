@@ -5,28 +5,22 @@ config interface loopback
 	option netmask 255.0.0.0
 
 config globals globals
-	option ula_prefix fd79:9040:3db4::/48
+	option ula_prefix auto
 
 config interface lan
 	option type bridge
 	option ifname eth0.1
 	option proto static
-	option ipaddr 192.168.2.1
+	option ipaddr 172.16.2.1
 	option netmask 255.255.255.0
 	option ip6assign 64
 	option igmp_snooping 1
 	option stp 1
-
-config device lan_eth0_1_dev
-	option name eth0.1
-	option macaddr d8:0d:17:34:9b:bc
+	option macaddr d8:0d:17:34:9b:be
 
 config interface wan
 	option ifname eth0.2
 	option proto dhcp
-
-config device wan_eth0_2_dev
-	option name eth0.2
 	option macaddr d8:0d:17:34:9b:bd
 
 config interface wan6
