@@ -6,7 +6,7 @@ config interface loopback
 
 config interface lan
 	option type bridge
-	option ifname 'bat0 eth0.1 eth1'
+	option ifname 'eth0.1 eth1'
 	option proto static
 	option ipaddr 172.16.1.3
 	option netmask 255.255.255.0
@@ -19,14 +19,6 @@ config interface lan
 config interface lan6
 	option ifname @lan
 	option proto dhcpv6
-	
-config interface bat0
-	option proto batadv
-	
-config interface wmesh
-	option proto batadv_hardif
-	option master bat0
-	option mtu 2304
 
 config switch
 	option name switch0

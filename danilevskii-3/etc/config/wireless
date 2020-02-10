@@ -1,11 +1,11 @@
 config wifi-device 2G
 	option type mac80211
-	option channel 6
+	option channel auto
 	option hwmode 11g
 	option path platform/ar933x_wmac
 	option htmode HT20
 	option legacy_rates 0
-	option country US
+	option country RU
 
 config wifi-iface ap_2G
 	option device 2G
@@ -16,15 +16,3 @@ config wifi-iface ap_2G
 	option encryption psk2+ccmp
 	option key 12051964
 	option macaddr f8:1a:67:8e:36:b3
-
-config wifi-iface mesh
-	option device 2G
-	option ifname mesh_2G
-	option network wmesh
-	option mode mesh
-	option mesh_id Irina
-	option mesh_fwding 0
-	option encryption sae
-	option key 12051964
-	option hidden 1
-	option macaddr f8:1a:67:8e:36:b4

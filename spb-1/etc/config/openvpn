@@ -1,9 +1,9 @@
 package openvpn
 
 config openvpn server
-	option enabled 1
+	option enabled 0
 	option proto udp
-	option dev tun
+	option dev tun0
 	option ca /etc/openvpn/pki/CA.crt
 	option cert /etc/openvpn/pki/Spb.crt
 	option key /etc/openvpn/pki/Spb.key
@@ -13,6 +13,7 @@ config openvpn server
 	option ccd_exclusive 1
 	option mode server
 	option tls_server 1
+	option topology subnet
 	option ifconfig '172.16.2.1 255.255.252.0'
 	option remote_cert_tls client
 	option client_to_client 1
@@ -25,7 +26,10 @@ config openvpn server
 	option persist_key 1
 	option persist_tun 1
 	option verb 3
+#	list route '172.16.0.0 255.255.255.0 172.16.0.1'
+#	list route '172.16.1.0 255.255.255.0 172.16.1.1' 
 	list push 'topology subnet'
+#	list push 'route-gateway 172.16.2.1'
 #	list push 'route 172.16.0.0 255.255.255.0 172.16.0.1'
 #	list push 'route 172.16.1.0 255.255.255.0 172.16.1.1'
 #	list push 'route 172.16.2.0 255.255.255.0 172.16.2.1'
@@ -33,7 +37,7 @@ config openvpn server
 config openvpn client
 	option enabled 1
 	option client 1
-	option dev tun
+	option dev tun1
 	option proto udp
 	option remote 91.205.165.159
 	option resolv_retry infinite
