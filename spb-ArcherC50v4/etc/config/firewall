@@ -155,7 +155,7 @@ config include
 	option path '/etc/firewall.user'
 
 config include 'miniupnpd'
-	option type 'script'
-	option path '/usr/share/miniupnpd/firewall.include'
 	option family 'any'
+	option path '/usr/share/miniupnpd/firewall.include'
 	option reload '1'
+	option type 'script'

@@ -1,7 +1,7 @@
 config dnsmasq
+	list server '/pool.ntp.org/1.1.1.1'
 	list server '127.0.0.1#5453'
 	list server '::1#5453'
-	list server '/pool.ntp.org/1.1.1.1'
 	option authoritative '1'
 	option boguspriv '1'
 	option domain 'lan'
