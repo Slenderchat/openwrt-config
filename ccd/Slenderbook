@@ -1,1 +1,2 @@
-ifconfig-push 172.16.3.2 255.255.252.0
+ifconfig-push 10.0.3.2 255.255.248.0
+ifconfig-ipv6-push fd00::3:1/109
