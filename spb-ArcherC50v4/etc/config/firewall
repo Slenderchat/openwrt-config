@@ -35,6 +35,17 @@ config redirect
 	option target 'DNAT'
 
 config rule
+	list src_ip '164.68.112.178'
+	list src_ip '45.141.84.10'
+	list src_ip '63.140.65.139'
+	list src_ip '85.209.0.102'
+	option family 'ipv4'
+	option name 'Blacklist'
+	option proto 'tcpudp'
+	option src 'wan'
+	option target 'DROP'
+
+config rule
 	option dest 'wan'
 	option dest_port '3544'
 	option name 'Reject-Teredo'
@@ -44,6 +55,7 @@ config rule
 
 config rule
 	option dest_port '1194'
+	option family 'ipv4'
 	option name 'Allow-OpenVPN'
 	option proto 'udp'
 	option src 'wan'
@@ -51,6 +63,7 @@ config rule
 
 config rule
 	option dest_port '22'
+	option family 'ipv4'
 	option name 'Allow-SSH'
 	option proto 'tcp'
 	option src 'wan'
