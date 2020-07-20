@@ -2,4 +2,5 @@ config dropbear
 	option PasswordAuth '0'
 	option Port '22'
 	option RootPasswordAuth '0'
-	option keyfile '/etc/dropbear/id_dropbear_ed25519'
+	list keyfile '/etc/dropbear/dropbear_rsa_host_key'
+	list keyfile '/etc/dropbear/dropbear_ecdsa_host_key'
