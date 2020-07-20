@@ -1,6 +1,1 @@
-config dropbear
-	list keyfile '/etc/dropbear/id_dropbear_dsa'
-	list keyfile '/etc/dropbear/id_dropbear_rsa'
-	option PasswordAuth '0'
-	option Port '22'
-	option RootPasswordAuth '0'
+../../../config/dropbear

@@ -1,26 +1,3 @@
-
-package openvpn
-
-config openvpn 'client'
+config openvpn
+	option config '/etc/openvpn/Spb.ovpn'
 	option enabled '1'
-	option client '1'
-	option dev 'tun0'
-	option proto 'udp'
-	list remote '88.201.239.39'
-	list remote '91.205.165.159'
-	option resolv_retry 'infinite'
-	option nobind '1'
-	option persist_key '1'
-	option persist_tun '1'
-	option ca '/etc/openvpn/pki/ca.crt'
-	option cert '/etc/openvpn/pki/Danilevskii.crt'
-	option key '/etc/openvpn/pki/Danilevskii.key'
-	option remote_cert_tls 'server'
-	option tls_crypt '/etc/openvpn/pki/tls.key'
-	option cipher 'AES-128-GCM'
-	option verb '3'
-	option comp_lzo 'adaptive'
-	option fast_io '1'
-	option auth 'SHA224'
-	option ncp_disable '1'
-

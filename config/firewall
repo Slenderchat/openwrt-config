@@ -1,0 +1,174 @@
+config defaults
+	option forward 'REJECT'
+	option input 'ACCEPT'
+	option output 'ACCEPT'
+	option syn_flood '1'
+
+config zone
+	list device 'tun0'
+	list network 'lan'
+	option forward 'ACCEPT'
+	option input 'ACCEPT'
+	option name 'lan'
+	option output 'ACCEPT'
+
+config zone
+	list network 'wan'
+	list network 'wan6'
+	option forward 'REJECT'
+	option input 'REJECT'
+	option masq '1'
+	option mtu_fix '1'
+	option name 'wan'
+	option output 'ACCEPT'
+
+config forwarding
+	option dest 'wan'
+	option src 'lan'
+
+config redirect
+	option family 'ipv4'
+	option name 'DNS-Hijack'
+	option proto 'tcpudp'
+	option src 'lan'
+	option src_dport '53'
+	option target 'DNAT'
+
+config rule
+	list src_ip '164.68.112.178'
+	list src_ip '45.141.84.10'
+	list src_ip '63.140.65.139'
+	list src_ip '85.209.0.102'
+	option family 'ipv4'
+	option name 'Blacklist'
+	option proto 'tcpudp'
+	option src 'wan'
+	option target 'DROP'
+
+config rule
+	option dest 'wan'
+	option dest_port '3544'
+	option name 'Reject-Teredo'
+	option proto 'udp'
+	option src 'lan'
+	option target 'REJECT'
+
+config rule
+	option dest_port '1194'
+	option family 'ipv4'
+	option name 'Allow-OpenVPN'
+	option proto 'udp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	option dest_port '22'
+	option family 'ipv4'
+	option name 'Allow-SSH'
+	option proto 'tcp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	option dest_port '68'
+	option family 'ipv4'
+	option name 'Allow-DHCP-Renew'
+	option proto 'udp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	option family 'ipv4'
+	option icmp_type 'echo-request'
+	option name 'Allow-Ping'
+	option proto 'icmp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	option family 'ipv4'
+	option name 'Allow-IGMP'
+	option proto 'igmp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	option dest_ip 'fc00::/6'
+	option dest_port '546'
+	option family 'ipv6'
+	option name 'Allow-DHCPv6'
+	option proto 'udp'
+	option src 'wan'
+	option src_ip 'fc00::/6'
+	option target 'ACCEPT'
+
+config rule
+	list icmp_type '130/0'
+	list icmp_type '131/0'
+	list icmp_type '132/0'
+	list icmp_type '143/0'
+	option family 'ipv6'
+	option name 'Allow-MLD'
+	option proto 'icmp'
+	option src 'wan'
+	option src_ip 'fe80::/10'
+	option target 'ACCEPT'
+
+config rule
+	list icmp_type 'bad-header'
+	list icmp_type 'destination-unreachable'
+	list icmp_type 'echo-reply'
+	list icmp_type 'echo-request'
+	list icmp_type 'neighbour-advertisement'
+	list icmp_type 'neighbour-solicitation'
+	list icmp_type 'packet-too-big'
+	list icmp_type 'router-advertisement'
+	list icmp_type 'router-solicitation'
+	list icmp_type 'time-exceeded'
+	list icmp_type 'unknown-header-type'
+	option family 'ipv6'
+	option limit '1000/sec'
+	option name 'Allow-ICMPv6-Input'
+	option proto 'icmp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	list icmp_type 'bad-header'
+	list icmp_type 'destination-unreachable'
+	list icmp_type 'echo-reply'
+	list icmp_type 'echo-request'
+	list icmp_type 'packet-too-big'
+	list icmp_type 'time-exceeded'
+	list icmp_type 'unknown-header-type'
+	option dest '*'
+	option family 'ipv6'
+	option limit '1000/sec'
+	option name 'Allow-ICMPv6-Forward'
+	option proto 'icmp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	option dest 'lan'
+	option name 'Allow-IPSec-ESP'
+	option proto 'esp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config rule
+	option dest 'lan'
+	option dest_port '500'
+	option name 'Allow-ISAKMP'
+	option proto 'udp'
+	option src 'wan'
+	option target 'ACCEPT'
+
+config include
+	option path '/etc/firewall.user'
+
+config include 'miniupnpd'
+	option family 'any'
+	option path '/usr/share/miniupnpd/firewall.include'
+	option reload '1'
+	option type 'script'
