@@ -1,0 +1,3 @@
+config openvpn
+	option config '/etc/openvpn/Spb.ovpn'
+	option enabled '1'
