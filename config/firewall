@@ -79,14 +79,6 @@ config rule
 
 config rule
 	option family 'ipv4'
-	option icmp_type 'echo-request'
-	option name 'Allow-Ping'
-	option proto 'icmp'
-	option src 'wan'
-	option target 'ACCEPT'
-
-config rule
-	option family 'ipv4'
 	option name 'Allow-IGMP'
 	option proto 'igmp'
 	option src 'wan'
