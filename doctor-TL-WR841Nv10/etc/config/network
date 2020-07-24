@@ -7,13 +7,18 @@ config interface 'loopback'
 config interface 'lan'
 	option dns '192.168.0.1'
 	option gateway '192.168.0.1'
-	option ifname 'eth0'
+	option ifname 'eth0.1 eth1'
 	option ipaddr '192.168.0.2'
 	option netmask '255.255.255.0'
 	option proto 'static'
 	option type 'bridge'
 
-config interface 'lan6'
-	option ifname '@lan'
-	option proto 'dhcpv6'
-	option reqprefix 'no'
+config switch
+	option enable_vlan '1'
+	option name 'switch0'
+	option reset '1'
+
+config switch_vlan
+	option device 'switch0'
+	option ports '1 2 3 4 0t'
+	option vlan '1'

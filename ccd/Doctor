@@ -1,0 +1,2 @@
+ifconfig-push 10.0.3.4 255.255.248.0
+ifconfig-ipv6-push fd00::3:4/109
